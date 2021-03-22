@@ -97,7 +97,7 @@ namespace The_dungeon
                         habilidad = Convert.ToInt32(Console.ReadLine()) - 1;
                     if (prota.UsarPoder(habilidad) < 0)
                     {
-                        Console.WriteLine("No tienes manà suficiene.");
+                        Console.WriteLine("No tienes manà suficiente.");
                         Ataque(true, prota, enem);
                     }
                 }
