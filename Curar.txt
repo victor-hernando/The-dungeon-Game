@@ -1,0 +1,6 @@
+Curar
+Curar
+Te curas una cantidad fija de daño.
+10
+10
+     
