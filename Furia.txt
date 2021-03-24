@@ -1,0 +1,5 @@
+Furia
+Furia
+Devuelves un porcentaje del daño del enemigo.
+35
+20

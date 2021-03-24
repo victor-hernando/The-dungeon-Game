@@ -1,0 +1,5 @@
+Escudo
+Escudo
+Te proteges usando tu escudo
+30
+5

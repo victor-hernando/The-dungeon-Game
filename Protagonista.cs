@@ -82,14 +82,14 @@ namespace The_dungeon
         {
             vida += Hechizos[hab].GetModif();
             Console.Write("{0} se cura ", nombre);
-            Resources.Color(1, Convert.ToString(Hechizos[0].GetModif()));
+            Hud.printColor(1, Convert.ToString(Hechizos[0].GetModif()));
         }
         public void ponerEscudo(int hab)
         {
             escudoModificado = escudo + escudo * Hechizos[hab].GetModif() / 100;
             turnosEscudo = 3;
             Console.Write("{0} se pone el escudo y aumenta un {1}% su defensa. Defensa actual: ", nombre, Hechizos[hab].GetModif());
-            Resources.Color(3, Convert.ToString(escudoModificado), true);
+            Hud.printColor(3, Convert.ToString(escudoModificado));
 
         }
         public void setfuria(int hab)

@@ -38,37 +38,6 @@ namespace The_dungeon
             Console.Title = "The Dungeon {a game by Blue_Glue_Guy}";
 
         }
-        public static void Color(int color, string texto, bool saltoLinea = false)
-        {
-            switch (color)
-            {
-                case 1:
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    break;
-                case 2:
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    break;
-                case 3:
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    break;
-                case 4:
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    break;
-                case 5:
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    break;
-                case 6:
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
-                    break;
-                default:
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    break;
-            }
-            if (saltoLinea) Console.WriteLine(texto);
-            else Console.Write(texto);
-            Console.ResetColor();
-        }
-
         public static void PutCursor(bool centered = false, int horizontal =0, int separated = 0)
         {
             int x, y;
@@ -82,7 +51,7 @@ namespace The_dungeon
         {
             try
             {
-                StreamReader file = new StreamReader("C:\\Users\\bigth\\Documents\\Universitat\\T1\\Fonaments de programació\\Test programs\\Juegos\\Juego the dungeon\\" + name + ".txt");
+                StreamReader file = new StreamReader("../../" + name + ".txt");
                 return file;
             }
             catch (Exception e)
