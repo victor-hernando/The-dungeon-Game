@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace The_dungeon
 {
-    static class Hud
+    class Hud
     {
         const int margen = 10;
-        public static void printColor(int color, string texto)
+        private string last;
+        public int linea;
+        public int cracter;
+
+        public void printColor(int color, string texto)
         {
             switch (color)
             {
@@ -38,11 +42,17 @@ namespace The_dungeon
             Console.Write(texto);
             Console.ResetColor();
         }
-        public static void printSkills(int color, string texto, int top =0, int left=0)
+        public void printSkills(int color, string texto, bool saltoLinea= true, int top =0, int left=0)
         {
-            if (left != 0) Console.CursorLeft=left;
-            if (top != 0) Console.CursorTop=top;
+            if (saltoLinea)
+            {
+                Console.CursorTop++;
+                Console.CursorLeft -= last.Length;
+            }
+            if (left > 0) Console.CursorLeft = left;
+            if (top > 0) Console.CursorTop=top;
             printColor(color, texto);
+            last = texto;
         }
     }
 }

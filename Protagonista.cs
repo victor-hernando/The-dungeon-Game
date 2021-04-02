@@ -17,6 +17,7 @@ namespace The_dungeon
         private double energiaMaxima;
         private double magia;
         private double magiaMaxima;
+        private Hud H = new Hud();
         public Protagonista():base(prota:true)
         {
             nombre = SetAdventurerName();
@@ -82,14 +83,14 @@ namespace The_dungeon
         {
             vida += Hechizos[hab].GetModif();
             Console.Write("{0} se cura ", nombre);
-            Hud.printColor(1, Convert.ToString(Hechizos[0].GetModif()));
+            H.printColor(1, Convert.ToString(Hechizos[0].GetModif()));
         }
         public void ponerEscudo(int hab)
         {
             escudoModificado = escudo + escudo * Hechizos[hab].GetModif() / 100;
             turnosEscudo = 3;
             Console.Write("{0} se pone el escudo y aumenta un {1}% su defensa. Defensa actual: ", nombre, Hechizos[hab].GetModif());
-            Hud.printColor(3, Convert.ToString(escudoModificado));
+            H.printColor(3, Convert.ToString(escudoModificado));
 
         }
         public void setfuria(int hab)
